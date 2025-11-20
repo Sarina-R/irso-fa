@@ -19,7 +19,7 @@ export default function HeroSection() {
 
   return (
     <div className='border-b border-neutral-500/15 relative overflow-hidden'>
-      <section className='relative pt-32 pb-28 min-h-[95vh] flex items-center'>
+      <section className='relative pt-20 pb-28 min-h-[95vh] flex items-center'>
         {/* Main Background Pattern */}
         <div className='absolute inset-0 bg-gradient-to-br from-background via-primary/5 to-yellow-500/10' />
 
