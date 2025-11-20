@@ -103,30 +103,17 @@ export default function HeroSection() {
 
               {/* Main Title */}
               <div className='space-y-4'>
-                <motion.h1
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4 }}
-                  className='text-5xl md:text-7xl font-bold leading-tight'
-                >
+                <h1 className='text-5xl md:text-7xl font-bold leading-tight'>
                   <span className='block text-foreground'>پلتفرم جهانی</span>
-                  <motion.span
+                  <span
                     className='block bg-gradient-to-r from-primary via-primary/80 to-yellow-500 bg-clip-text text-transparent'
-                    animate={{
-                      backgroundPosition: ['0%', '100%', '0%'],
-                    }}
-                    transition={{
-                      duration: 5,
-                      repeat: Infinity,
-                      ease: 'easeInOut',
-                    }}
                     style={{
                       backgroundSize: '200% 100%',
                     }}
                   >
                     استعدادهای درخشان
-                  </motion.span>
-                </motion.h1>
+                  </span>
+                </h1>
 
                 {/* Description */}
                 <motion.p
@@ -189,12 +176,7 @@ export default function HeroSection() {
               </motion.div>
 
               {/* Stats Grid */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1 }}
-                className='grid grid-cols-2 lg:grid-cols-4 gap-4 pt-8'
-              >
+              <div className='grid grid-cols-2 lg:grid-cols-4 gap-4 pt-8'>
                 {[
                   {
                     icon: <Users className='w-6 h-6' />,
@@ -221,34 +203,20 @@ export default function HeroSection() {
                     color: 'from-yellow-500/20 to-yellow-500/10',
                   },
                 ].map((item, i) => (
-                  <motion.div
+                  <div
                     key={i}
-                    whileHover={{ scale: 1.08, y: -5 }}
                     className={`p-4 rounded-2xl bg-gradient-to-br ${item.color} border border-primary/10 hover:border-primary/30 transition-all backdrop-blur-sm`}
                   >
-                    <motion.div
-                      animate={{
-                        scale: [1, 1.1, 1],
-                        rotate: [0, 5, 0],
-                      }}
-                      transition={{
-                        duration: 4,
-                        repeat: Infinity,
-                        delay: i * 0.5,
-                      }}
-                      className='text-primary mb-2'
-                    >
-                      {item.icon}
-                    </motion.div>
+                    <div className='text-primary mb-2'>{item.icon}</div>
                     <div className='text-2xl font-bold text-foreground'>
                       {item.value}
                     </div>
                     <div className='text-xs text-muted-foreground mt-1'>
                       {item.label}
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
-              </motion.div>
+              </div>
             </motion.div>
 
             {/* RIGHT - ROBOT & VISUALS */}
@@ -365,26 +333,6 @@ export default function HeroSection() {
             </motion.div>
           </div>
         </div>
-
-        {/* Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2 }}
-          className='absolute bottom-8 left-1/2 transform -translate-x-1/2'
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className='w-6 h-10 border-2 border-primary rounded-full flex justify-center'
-          >
-            <motion.div
-              animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className='w-1 h-3 bg-primary rounded-full mt-2'
-            />
-          </motion.div>
-        </motion.div>
       </section>
     </div>
   )
