@@ -24,23 +24,16 @@ export default function HeroSection() {
         <div className='absolute inset-0 bg-gradient-to-br from-background via-primary/5 to-yellow-500/10' />
 
         {/* Floating Animated Elements */}
-        <motion.div
+        {/* <motion.div
           className='absolute top-1/4 left-1/4 w-80 h-80 bg-gradient-to-r from-primary/30 to-yellow-500/20 rounded-full blur-3xl'
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.5, 0.3],
           }}
           transition={{ duration: 8, repeat: Infinity }}
-        />
+        /> */}
 
-        <motion.div
-          className='absolute bottom-1/3 right-1/4 w-96 h-96 bg-gradient-to-l from-primary/20 to-yellow-500/10 rounded-full blur-3xl'
-          animate={{
-            scale: [1.2, 1, 1.2],
-            opacity: [0.4, 0.2, 0.4],
-          }}
-          transition={{ duration: 10, repeat: Infinity }}
-        />
+        <div className='absolute bottom-1/3 right-1/4 w-96 h-96 bg-gradient-to-l from-primary/20 to-yellow-500/10 rounded-full blur-3xl opacity-50' />
 
         {/* Circuit Pattern Overlay */}
         <div className='absolute inset-0 opacity-10'>
